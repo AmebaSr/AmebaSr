@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Favorite</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+</head>
+
+
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+        <!-- box-header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/logo.png" width="50" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+        </header>
+        <!-- end box-header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">Favorite</li>
+
+                <li><a href="/index">Intro</a></li>
+                <li><a href="/about">About me</a></li>
+                <li><a href="/video">Video</a> </li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+
+    <!-- top bar -->
+    <div class="top-bar">
+        <h1>Favorite</h1>
+        <p><a href="/index">Home</a> / Favorite</p>
+    </div>
+    <!-- end top bar -->
+
+    <!-- main container -->
+    <div class="main-container video-inner clearfix">
+        <!-- video div -->
+        <div class="video-div">
+            <div class="video">
+
+                <!-- portfolio_container -->
+                <div class="no-padding portfolio_container clearfix">
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-6  dbd">
+                    <div id="favlist"></div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 dbd tw fvideoItem" id="fvideoItem0">
+                        <a href="https://www.twitch.tv/videos/673308488" class="portfolio_item">
+                            <img src="img/twdbd1.png" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="video-border clearfix">
+                                    <div class="item_info">
+                                        <span>[薩滿][粵語]讓我解任拿血點好不好</span>
+                                        <em>DBD / Twitch</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <button type="button" class="col-md-12 delete" style="font-weight:bold;" id="fvideoItem0" value="fvideoItem0">Remove from favorite list</button>
+                    </div>
+                    <!-- end single work -->
+
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-6 dbd yt fvideoItem" id="fvideoItem1">
+                        <a href="https://www.youtube.com/watch?v=sf8r_QBIVg8" class="portfolio_item">
+                            <img src="img/ytdbd1.png" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="video-border clearfix">
+                                    <div class="item_info">
+                                        <span>2020.07.07 三角頭</span>
+                                        <em>DBD / Youtube</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <button type="button" class="col-md-12 delete" style="font-weight:bold;" id="fvideoItem1" value="fvideoItem1">Remove from favorite list</button>
+                    </div>
+                    <!-- end single work -->
+
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-12 r6 tw fvideoItem" id="fvideoItem2">
+                        <a href="https://www.twitch.tv/videos/672578692?filter=archives&sort=time" class="portfolio_item">
+                            <img src="img/twr61.png" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="video-border clearfix">
+                                    <div class="item_info">
+                                        <span>[薩滿][粵語]給我爆頭啦QVQ</span>
+                                        <em>R6 / Twitch</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <button type="button" class="col-md-12 delete" style="font-weight:bold;" id="fvideoItem2" value="fvideoItem2">Remove from favorite list</button>
+                    </div>
+                    <!-- end single work -->
+
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-6 dbd tw fvideoItem" id="fvideoItem3">
+                        <a href="https://www.twitch.tv/videos/672444428?filter=archives&sort=time" class="portfolio_item">
+                            <img src="img/twdbd3.png" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="video-border clearfix">
+                                    <div class="item_info">
+                                        <span>[薩滿][粵語]給我爆頭啦QVQ</span>
+                                        <em>DBD / Twitch</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <button type="button" class="col-md-12 delete" style="font-weight:bold;" id="fvideoItem3" value="fvideoItem3">Remove from favorite list</button>
+                    </div>
+                    <!-- end single work -->
+
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-6 r6 tw fvideoItem" id="fvideoItem4">
+                        <a href="https://www.twitch.tv/videos/671646658?filter=archives&sort=time" class="portfolio_item">
+                            <img src="img/twdr62.png" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="video-border clearfix">
+                                    <div class="item_info">
+                                        <span>[薩滿][粵語]給我爆頭啦QVQ</span>
+                                        <em>R6 / Twitch</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <button type="button" class="col-md-12 delete" style="font-weight:bold;" id="fvideoItem4" value="fvideoItem4">Remove from favorite list</button>
+                    </div>
+                    <!-- end single work -->
+
+                    <!-- single work -->
+                    <div class="col-md-4 col-sm-12 gtfo tw fvideoItem" id="fvideoItem5">
+                        <a href="https://www.twitch.tv/videos/663085907?filter=archives&sort=time" class="portfolio_item">
+                            <img src="img/twgtfo1.png" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="video-border clearfix">
+                                    <div class="item_info">
+                                        <span>[薩滿][粵語]給我爆頭啦QVQ</span>
+                                        <em>GTFO / Twitch</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <button type="button" class="col-md-12 delete" style="font-weight:bold;" id="fvideoItem5" value="fvideoItem5">Remove from favorite list</button>
+                    </div>
+
+                </div>
+                <!-- end portfolio_container -->
+            </div>
+            <!-- video -->
+        </div>
+        <!-- end video div -->
+    </div>
+    <!-- end main container -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">©沒有圖騰的薩滿</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+    <script>
+        $(document).ready(function(){  
+
+            var formId = $(this).attr('id');
+            var favoriteListAll=[];
+            var favlist = [];
+            var favitem = 0; 
+            var favAll=[];
+            var favAllNum=0; 
+            var favlist2 = [];
+            var favitem2 = 0; 
+            var TN;
+        
+            var tempName;
+
+            function disp( divs ,itemName) {
+  var a = [];
+  for ( var i = 0; i < divs.length; i++ ) {
+  var t=itemName+i.toString();
+    a.push(t);
+	//alert( a[i] );
+	for(var j=0;j<favAllNum;j++){
+	//alert(favAll[j]);
+	var tempFav;
+	tempFav="f"+favAll[j].substring(1, favAll[j].length - 1);
+	//console.log(tempFav);
+	if(a[i]==tempFav){
+		var temp=a[i];
+		var temptemp="#"+temp;
+		//alert(temptemp+"  aaaaaaa");
+	$(temptemp).show();
+		}
+	}
+  }
+  return a;
+}
+
+		tempName=localStorage.getItem("name");
+		
+		var name="&name="+tempName;
+        
+        $.ajax({
+          url: "http://127.0.0.1:9487/readfavourlist",          
+          type: "POST",
+          data: name ,
+          success: function (result) {
+            result = JSON.parse(result);
+            $("#favlist").empty();
+            $.each(result, function(i,fav){
+			  var favourite = fav.favlist;
+              favlist2[favitem2] = favourite.substring(1, favourite.length - 1);
+			  favAll[favAllNum]=favourite;
+			  favAllNum++;
+			  favitem+=1;
+			  //$("#favlist").append('<div class="container"><div class="row"><div class="col-1"></div><font color="Orange"><p>'+ favourite +'</p></font></div></div>');
+			  //var tempID="\[\""+"videoItem0"+"\"\]";
+			  
+			  //if(favourite==tempID){
+			  //$("#favlist").append('<div class="container"><div class="row"><div class="col-1"></div><font color="Orange"><p>'+ tempID +'</p></font></div></div>');
+				
+			 //$("#favlist").append('<div class="container"><div class="row"><div class="col-1"></div><font color="Orange"><p>'+ favourite +'</p></font></div></div>');
+			  
+			  //}
+			  $(".fvideoItem").hide();
+			//var temp=$('.videoItem').attr('id').toArray();
+			$(".ftextGuideItem").hide();
+			$(".fquoteItem").hide();
+			disp( $( ".fvideoItem" ).toArray().reverse(),"fvideoItem" );
+			disp( $( ".ftextGuideItem" ).toArray().reverse(),"ftextGuideItem" );
+			disp( $( ".fquoteItem" ).toArray().reverse(),"fquoteItem" );
+			});
+			
+            console.log(result);
+            //alert(result);
+          },
+          error: function(result){
+              console.log(result);
+            }
+        });
+        favAllNum=0;
+
+        $(".delete").click(function(){
+	 
+	         var formId = $(this).attr('id');
+	 
+	 //var formId = ($(this).val());
+	 //favlist[favitem] = $('.add').val();
+	 
+	        if(formId!=null){
+	        var tempFav;
+		        tempFav=formId.substring(1);
+		//alert(tempFav);
+	 
+	        var tempName;
+	            tempName=localStorage.getItem("name");
+	//tempfavlist=localStorage.getItem("favlist");
+		
+	        var myfavdata="&name="+tempName+"&favlist="+tempFav;
+	//var myfavdata="&name="+tempName+"&favlist="+favlist[favitem];
+	        $.ajax({
+	        type: "POST",
+	        data:  myfavdata ,
+	        url: "http://127.0.0.1:9487/delete",
+	        success: function (result) {
+            //alert(result);
+            if (result == "OK") {
+            alert("The data was deleted");
+            
+            var tempName;
+            tempName=localStorage.getItem("name");
+            
+            var name="&name="+tempName;
+            
+            $.ajax({
+            url: "http://127.0.0.1:9487/readfavourlist",          
+            type: "POST",
+            data: name ,
+            success: function (result) {
+                result = JSON.parse(result);
+                $("#favlist").empty();
+                $.each(result, function(i,fav){
+                var favourite = fav.favlist;
+                favlist2[favitem2] = favourite.substring(1, favourite.length - 1);
+                favAll[favAllNum]=favourite;
+                favAllNum++;
+                favitem+=1;
+			  //$("#favlist").append('<div class="container"><div class="row"><div class="col-1"></div><font color="Orange"><p>'+ favourite +'</p></font></div></div>');
+			  //var tempID="\[\""+"videoItem0"+"\"\]";
+			  
+			  //if(favourite==tempID){
+			  //$("#favlist").append('<div class="container"><div class="row"><div class="col-1"></div><font color="Orange"><p>'+ tempID +'</p></font></div></div>');
+				
+			 //$("#favlist").append('<div class="container"><div class="row"><div class="col-1"></div><font color="Orange"><p>'+ favourite +'</p></font></div></div>');
+			  
+			  //}
+			});
+			$(".fvideoItem").hide();
+			//var temp=$('.videoItem').attr('id').toArray();
+			$(".ftextGuideItem").hide();
+			$(".fquoteItem").hide();
+			disp( $( ".fvideoItem" ).toArray().reverse(),"fvideoItem" );
+			disp( $( ".ftextGuideItem" ).toArray().reverse(),"ftextGuideItem" );
+			disp( $( ".fquoteItem" ).toArray().reverse(),"fquoteItem" );
+            console.log(result);
+            //alert(result);
+          },
+          error: function(result){
+              console.log(result);
+            }
+        });
+        favAllNum=0;
+		
+		
+		} else {
+		alert("The data wasnt deleted");
+		}
+		}, error: function (xhr, textStatus, errorThrown) {
+		alert("Favourite_List is lose");
+		console.log(textStatus);
+		}
+	});
+	 }
+	 });
+
+    
+        });
+    </script>
+
+</body>
+
+</html>

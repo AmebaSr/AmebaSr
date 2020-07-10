@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Register</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E</script>
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+        <!-- box header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/logo.png" width="50" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">Register</li>
+
+                <li><a href="/index">Intro</a></li>
+                <li><a href="/about">About me</a></li>
+                <li><a href="/video">Video</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/fav">Favorite</a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+
+    <!-- top bar -->
+    <div class="top-bar">
+        <h1>register</h1>
+        <p><a href="/index">Home</a> / register</p>
+    </div>
+    <!-- end top bar -->
+
+    <div class="container main-container">
+        <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="input-contact">
+                            <input type="text" name="name" id="NameRe">
+                            <span>User Name</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-contact">
+                            <input type="password" name="password" class="col-md-12" id="PasswordRe">
+                            <span>Password</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-contact">
+                            <input type="password" name="password" class="col-md-12" id="PasswordRe2">
+                            <span>Re-enter Password</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="btn btn-box" id="buttonRe" value="Click" >
+                            Register
+                        </button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="h-20"></div>
+            <img src="img/logo.png" class="img-responsive" alt="" />
+        </div>
+
+
+    </div>
+    <!-- end main-container -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">@沒有圖騰的薩滿</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+
+    <script>
+        $(document).ready(function(){ 
+        
+        $.ajax({
+                dataType: 'jsonp',
+                jsonpCallback: '_wrapper',
+                data: $('#formID').serialize(),
+                type: 'POST',
+                url: "http://127.0.0.1:9487/register",
+                success: handleButtonResponse,
+        });
+        function handleButtonResponse(data){
+          
+          // parse the json string
+          var jsonObject = JSON.parse(data);
+          $('#reponseID').append( jsonObject.message );
+        }
+        
+        
+        $("#buttonRe").click(function(){
+            //alert("Loading now, please wait.");
+            var tempName, tempPassword, tempPassword2;
+            //tempEmail = document.forms["signin"]["Email"].value;
+        //	tempName = document.forms["signin"]["Name"].value;
+            //tempPassword = document.forms["signin"]["Password"].value;
+            
+            
+            tempName=$("#NameRe").val();
+            tempPassword=$("#PasswordRe").val();
+            tempPassword2=$("#PasswordRe2").val();
+            
+            var mydata="&name="+tempName+"&password="+tempPassword;
+            
+                if(tempName == "" || tempPassword == "")
+            {
+                alert("Please fill in all the blanks.");
+            }else if(tempPassword2!=tempPassword){
+            alert("The password you enter is different from the one you enter in Re-enter Password");
+            }
+            else
+            {
+                //alert("User name ="+tempName+" Password="+tempPassword);
+                $.ajax({
+                    url: "http://127.0.0.1:9487/register", 
+                    type: 'POST',
+                    data: mydata,
+                    success: function(result){
+                        alert("Registration success");
+                        alert("Thanks for creating an account, your username is: " + tempName + "and password is: "+ tempPassword + ". Enjoy!");
+                        //window.location.href = "http://127.0.0.1:4242/Login";
+                    //	window.location.href = "http://ABC-nekokitsune4242917356.codeanyapp.com:4242/Register";
+                        }, error: function (xhr, textStatus, errorThrown) {
+                            alert("This name have been used, please try again with other username");
+                            console.log(textStatus);
+                  }
+                    });
+                }
+        });
+        });
+        </script>
+        
+</body>
+
+</html>
